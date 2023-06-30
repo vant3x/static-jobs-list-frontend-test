@@ -1,0 +1,5 @@
+<app-filter-jobs [selectedFilters]="selectedFilters" (filterRemoved)="removeFilter($event)"   (filtersCleared)="clearFilters()"
+></app-filter-jobs>
+<div *ngFor="let job of filteredJobListings">
+    <app-card-detail-job [jobData]="job"  (filterApplied)="applyFilter($event.filterType, $event.value)"></app-card-detail-job>
+</div>

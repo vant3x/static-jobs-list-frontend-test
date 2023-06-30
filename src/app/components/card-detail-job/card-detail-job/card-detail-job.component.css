@@ -1,0 +1,75 @@
+.card-job-detail-container {
+    /*
+      --lightgrayishcyan
+    */
+    background-color: #fff;
+    box-shadow:0 20px 35px -55px hsla(180, 29%, 50%, 0.589),  0 8px 10px -8px hsla(180, 29%, 50%, 0.706);
+    cursor: pointer;
+}
+
+.card-job-detail-container:hover {
+    border-left-color: var(--darkcyan);
+    transition: all 0.5s;
+}
+
+.featured-job {
+    border-left-color: var(--darkcyan);
+}
+
+.company-name {
+    color:var(--darkcyan);
+    font-size:15px;
+}
+
+.job-position-title {
+    color:var(--verydarkgrayishcyan);
+    cursor: pointer;
+    font-size:15px;
+}
+
+.job-position-title:hover {
+    color:var(--darkcyan);    
+}
+
+
+.rounded-breadcrumb {
+    border-radius: 20px;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    vertical-align: center;
+}
+
+.job-light-text {
+    color:var(--darkgrayishcyan);
+}
+
+.bg-darkcyan {
+    background-color:  var(--darkcyan);
+}
+
+
+.bg-verydarkgrayishcyan {
+    background-color: var(--verydarkgrayishcyan);
+}
+
+.filter-option {
+    background-color:var( --lightgrayishcyan);
+    color:var(--darkcyan);
+    font-weight: 500;
+    padding:10px 6px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.filter-option:hover {
+    background-color:var( --darkcyan);
+    color:#fff;
+}
+
+.separator {
+ height: 3px;
+ width: 3px;
+ background-color: var(--darkgrayishcyan);
+ border-radius: 50px;
+}

@@ -1,0 +1,5 @@
+.header-bg {
+    background-color: hsl(180, 29%, 50%);
+    background-image: url('../../../../../assets/images/bg-header-desktop.svg');
+    height: 160px;
+}

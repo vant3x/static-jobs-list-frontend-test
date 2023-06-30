@@ -1,0 +1,15 @@
+<div
+  class="container mx-auto animate__animated animate__bounceIn rounded-md filter-option-container w-full  px-6 py-4 flex items-center justify-start shadow-md flex-row mb-6 p-4 bg-white absolute top-[17%] w-[80vw]"
+  *ngIf="selectedFilters.length > 0"
+>
+  <div *ngFor="let filter of selectedFilters" class="ml-4 flex items-start gap-0">
+    <div class="filter-option rounded mr-4  flex">
+      <span class="filter"> {{ filter.value }}</span>
+      <button  class="btn-remove-filter px-2 ml-2" (click)="removeFilter(filter.filterType)">
+        <img src="assets/images/icon-remove.svg" alt="" />
+      </button>
+    </div>
+  </div>
+
+  <button class="btn-clear-filter ml-auto mr-4" (click)="clearFilters()">Clear</button>
+</div>

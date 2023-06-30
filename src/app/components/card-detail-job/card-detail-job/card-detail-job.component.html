@@ -1,0 +1,47 @@
+<article
+  class="card-job-detail-container rounded px-6 py-6 flex flex-col sm:flex-row items-center justify-between  	flex-row mb-6 p-6"
+  [ngClass]="{'featured-job': jobData.featured}"  >
+  <div class="flex justify-center content-center ">
+    <div>
+      <img class="mr-4 sm:static sm:left-auto sm:top-auto absolute left-[5%] top-[30%] sm:w-[50px]" [src]="'assets/' + jobData.logo" alt="" />
+    </div>
+    <div>
+      <p>
+        <span class="company-name"> {{ jobData.company }}</span>
+        <span
+          class="mx-2 rounded-breadcrumb bg-darkcyan text-white"
+          *ngIf="jobData.new"
+          >New!</span
+        >
+        <span
+          class="rounded-breadcrumb bg-verydarkgrayishcyan text-white"
+          *ngIf="jobData.featured"
+          >Featured</span
+        >
+      </p>
+      <p class="font-bold job-position-title mt-2">{{ jobData.position }}</p>
+      <div class="flex items-center">
+        <span class="job-light-text mr-2"> {{ jobData.postedAt }} </span>
+        <div class="separator mr-2"></div>
+        <span class="job-light-text mr-2"> {{ jobData.contract }} </span>
+        <div class="separator mr-2"></div>
+        <span class="job-light-text"> {{ jobData.location }} </span>
+      </div>
+    </div>
+  </div>
+  <div class="flex-wrap">
+    <div class="w-[80%] sm:w-full">
+      <span class="filter-option rounded  mr-4" *ngIf="jobData.role" (click)="applyFilter('role', jobData.role)">
+        {{ jobData.role }}
+      </span>
+      <span class="filter-option rounded mr-4" *ngIf="jobData.level" (click)="applyFilter('level', jobData.level)">{{ jobData.level }}</span>
+      <span class="filter-option rounded  mr-4"  (click)="applyFilter('language', language)" *ngFor="let language of jobData.languages">
+        {{ language }}
+      </span>
+      <span class="filter-option rounded mr-4"  (click)="applyFilter('tool', tool)" *ngFor="let tool of jobData.tools" >
+        {{ tool }}
+      </span>
+    
+    </div>
+  </div>
+</article>

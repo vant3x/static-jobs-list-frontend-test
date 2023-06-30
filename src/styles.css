@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --darkcyan: hsl(180, 29%, 50%);
+    --lightgrayishcyanbg:hsl(180, 52%, 96%);
+    --lightgrayishcyan:hsl(180, 31%, 95%);
+    --darkgrayishcyan:  hsl(180, 8%, 52%);
+    --verydarkgrayishcyan: hsl(180, 14%, 20%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightgrayishcyanbg);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
